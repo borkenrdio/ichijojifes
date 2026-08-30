@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-label="LOGO 04">
+  <rect width="320" height="120" rx="14" fill="#ffffff"/>
+  <rect x="14" y="14" width="292" height="92" rx="10" fill="none" stroke="#007a4d" stroke-width="8"/>
+  <circle cx="70" cy="60" r="24" fill="#007a4d"/>
+  <text x="112" y="68" fill="#123b2c" font-family="Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="1">LOGO 04</text>
+</svg>
