@@ -1842,3 +1842,10 @@ section[id], #volunteer { scroll-margin-top: 92px; }
   .site-footer span,
   .site-footer a { font-size: .82rem; }
 }
+
+/* FOOD photos sit directly on the white card without a tinted backing box. */
+.content-section--food .vendor-card > img {
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+}
