@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://ichijojifest2026.com/sitemap.xml
