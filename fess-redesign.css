@@ -1668,6 +1668,10 @@ section[id], #volunteer { scroll-margin-top: 92px; }
   max-width: 860px;
   margin-inline: auto;
 }
+.notice-grid--single {
+  grid-template-columns: minmax(0, 720px);
+  justify-content: center;
+}
 
 /* Natural-size landscape pieces instead of stretched strips. */
 .experience-overview__landscape {
@@ -1759,6 +1763,7 @@ section[id], #volunteer { scroll-margin-top: 92px; }
 #supporters .content-section__body { padding-bottom: 42px; }
 
 @media (max-width: 560px) {
+  html { font-size: 18px; }
   .guide { padding-bottom: 56px; }
   .content-section__body,
   #dance .content-section__body,
@@ -1813,4 +1818,27 @@ section[id], #volunteer { scroll-margin-top: 92px; }
     padding: 0;
     font-size: .74rem;
   }
+
+  /* Mobile typography: raise the small supporting copy to a comfortable reading size. */
+  .hero__lead { font-size: .84rem; line-height: 1.85; }
+  .hero-sponsors__message { font-size: .76rem; }
+  .about p:last-child { font-size: .92rem; line-height: 1.9; }
+  .guide-nav b { font-size: .88rem; }
+  .guide-nav small { font-size: .72rem; line-height: 1.55; }
+  .intro-block p,
+  .content-section--food .intro-block--food p { font-size: .84rem; }
+  .vendor-card__content > h4 { font-size: .92rem; }
+  .content-section--food .vendor-card .vendor-card__shop { font-size: .72rem; }
+  .content-section--food .vendor-card .vendor-card__description { font-size: .76rem; }
+  .experience-overview__heading > p:last-child { font-size: .84rem; }
+  .experience-booth-card__copy strong { font-size: 1rem; }
+  .experience-booth-card__copy small { font-size: .76rem; line-height: 1.65; }
+  .timeline h3 { font-size: 1rem; }
+  .timeline p { font-size: .76rem; line-height: 1.65; }
+  .sponsor-profile-card__content p { font-size: .78rem; }
+  .sponsor-profile-card__content address { font-size: .74rem; }
+  .sponsor-profile-card__content > a,
+  .sponsor-profile-card__links a { font-size: .76rem; }
+  .site-footer span,
+  .site-footer a { font-size: .82rem; }
 }
