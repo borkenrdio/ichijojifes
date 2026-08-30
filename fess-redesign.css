@@ -1551,7 +1551,11 @@ section[id], #volunteer { scroll-margin-top: 92px; }
   background: rgba(255, 253, 247, .98);
   box-shadow: 0 7px 24px rgba(40, 34, 20, .12);
 }
-.content-section__bar { top: 74px; z-index: 18; }
+.content-section__bar {
+  position: relative;
+  top: auto;
+  z-index: 18;
+}
 
 /* FOOD: catches are the primary message; shop names are supporting information. */
 .vendor-card {
@@ -1664,7 +1668,7 @@ section[id], #volunteer { scroll-margin-top: 92px; }
   html { scroll-padding-top: 80px; }
   section[id], #volunteer { scroll-margin-top: 80px; }
   .site-header { min-height: 64px; }
-  .content-section__bar { top: 64px; }
+  .content-section__bar { top: auto; }
   .site-nav { background: rgba(255, 253, 247, .99); }
   #dance .content-section__body,
   #timetable .content-section__body,
