@@ -1743,3 +1743,74 @@ section[id], #volunteer { scroll-margin-top: 92px; }
   .experience-overview__landscape img { max-width: 24%; max-height: 68px; }
   .content-section__body::after { bottom: 10px; }
 }
+
+/* Section footers stay clean: remove decorative rows and their reserved space. */
+.guide { padding-bottom: 76px; }
+.guide::after,
+.content-section__body::after,
+.hero-sponsors__trees,
+.food-footer-landscape,
+.experience-overview__landscape { display: none !important; }
+.content-section__body,
+#dance .content-section__body,
+#timetable .content-section__body,
+#access .content-section__body,
+#information .content-section__body,
+#supporters .content-section__body { padding-bottom: 42px; }
+
+@media (max-width: 560px) {
+  .guide { padding-bottom: 56px; }
+  .content-section__body,
+  #dance .content-section__body,
+  #timetable .content-section__body,
+  #access .content-section__body,
+  #information .content-section__body,
+  #supporters .content-section__body { padding-bottom: 28px; }
+
+  /* Mobile DANCE cards: give the number, time, title and photo fixed grid areas. */
+  .dance-card {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) 100px;
+    grid-template-rows: auto auto auto;
+    gap: 10px 10px;
+    padding: 18px 14px 16px;
+    text-align: left;
+  }
+  .dance-card__number {
+    position: static;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    width: 38px;
+    height: 38px;
+    transform: none;
+  }
+  .dance-card time {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    padding: 0;
+    font-size: 1.25rem;
+  }
+  .dance-card h3 {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1.05rem;
+  }
+  .dance-card img {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    width: 100%;
+    height: 100px;
+  }
+  .dance-card p {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin: 4px 0 0;
+    padding: 0;
+    font-size: .74rem;
+  }
+}
