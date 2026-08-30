@@ -1577,24 +1577,8 @@ section[id], #volunteer { scroll-margin-top: 92px; }
   min-width: 0;
   padding: 18px 18px 16px 0;
 }
-.vendor-card__heading { align-items: flex-start; gap: 12px; }
-.vendor-card__heading > div { min-width: 0; }
-.vendor-card__heading span {
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
-  font-size: 1rem;
-}
-.vendor-card .vendor-card__shop {
-  margin: 0 0 6px;
-  padding: 0;
-  color: #66736b;
-  font-size: .69rem;
-  font-weight: 800;
-  line-height: 1.45;
-  border: 0;
-}
-.vendor-card__heading h4 {
+.vendor-card__content > h4 {
+  display: block;
   margin: 0;
   color: var(--green);
   font-size: clamp(.98rem, 1.15vw, 1.12rem);
@@ -1602,14 +1586,67 @@ section[id], #volunteer { scroll-margin-top: 92px; }
   line-height: 1.55;
   letter-spacing: .025em;
 }
-.vendor-card .vendor-card__description {
-  margin: 11px 0 0 56px;
-  padding-top: 10px;
+.content-section--food .vendor-card .vendor-card__shop {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 9px 0 0;
+  padding: 6px 0 9px;
+  color: #53665b;
+  font-size: .72rem;
+  font-weight: 900;
+  line-height: 1.45;
+  border-bottom: 1px dotted #d5b984;
+}
+.content-section--food .vendor-card .vendor-card__shop img {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 19px;
+  object-fit: contain;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+}
+.content-section--food .vendor-card .vendor-card__shop span {
+  display: inline;
+  width: auto;
+  height: auto;
+  margin: 0;
+  color: inherit;
+  background: transparent;
+  border-radius: 0;
+  font-size: inherit;
+}
+.content-section--food .vendor-card .vendor-card__description {
+  margin: 9px 0 0;
+  padding-top: 0;
   color: #272b28;
   font-size: .77rem;
   font-weight: 800;
   line-height: 1.8;
-  border-top: 1px dotted #d5b984;
+  border-top: 0;
+}
+
+/* Draw chevrons in CSS so font metrics cannot stretch them vertically. */
+.guide-nav i {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  font-size: 0;
+  line-height: 0;
+}
+.guide-nav i::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--green);
+  border-bottom: 2px solid var(--green);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 /* Reserve a real footer area for section decorations, so trees never sit behind content. */
@@ -1688,18 +1725,12 @@ section[id], #volunteer { scroll-margin-top: 92px; }
     padding: 9px;
   }
   .vendor-card__content { padding: 14px 12px 13px 0; }
-  .vendor-card__heading { gap: 8px; }
-  .vendor-card__heading span {
-    width: 37px;
-    height: 37px;
-    flex-basis: 37px;
-    font-size: .82rem;
-  }
-  .vendor-card .vendor-card__shop { margin-bottom: 4px; font-size: .61rem; }
-  .vendor-card__heading h4 { font-size: .84rem; line-height: 1.55; }
-  .vendor-card .vendor-card__description {
-    margin: 9px 0 0 45px;
-    padding-top: 8px;
+  .vendor-card__content > h4 { font-size: .84rem; line-height: 1.55; }
+  .content-section--food .vendor-card .vendor-card__shop { margin-top: 7px; padding-bottom: 7px; font-size: .65rem; }
+  .content-section--food .vendor-card .vendor-card__shop img { width: 17px; height: 17px; flex-basis: 17px; }
+  .content-section--food .vendor-card .vendor-card__description {
+    margin: 8px 0 0;
+    padding-top: 0;
     font-size: .68rem;
     line-height: 1.72;
   }
