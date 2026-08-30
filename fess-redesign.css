@@ -1447,7 +1447,7 @@ body .site-footer span { font-weight: 700; }
     url("assets/ichijojifes/people/family-in-yukata.png"),
     url("assets/ichijojifes/decorations/bush-light-wide.png"),
     url("assets/ichijojifes/decorations/tree-round-tall.png");
-  background-position: 3% bottom, 24% bottom, 61% bottom, 95% bottom;
+  background-position: 5% bottom, 24% bottom, 61% bottom, 92% bottom;
   background-size: auto 82px, auto 72px, auto 28px, auto 76px;
 }
 
@@ -1457,7 +1457,7 @@ body .site-footer span { font-weight: 700; }
     url("assets/ichijojifes/decorations/tree-conifer.png"),
     url("assets/ichijojifes/decorations/bush-light-with-flowers.png"),
     url("assets/ichijojifes/decorations/festival-stage-and-lanterns.png");
-  background-position: 3% bottom, 31% bottom, 68% bottom, 96% bottom;
+  background-position: 5% bottom, 31% bottom, 68% bottom, 92% bottom;
   background-size: auto 72px, auto 64px, auto 27px, auto 76px;
 }
 
@@ -1467,7 +1467,7 @@ body .site-footer span { font-weight: 700; }
     url("assets/ichijojifes/decorations/tree-round-wide.png"),
     url("assets/ichijojifes/decorations/bush-light-small.png"),
     url("assets/ichijojifes/decorations/tree-conifer.png");
-  background-position: 3% bottom, 31% bottom, 67% bottom, 96% bottom;
+  background-position: 5% bottom, 31% bottom, 67% bottom, 92% bottom;
   background-size: auto 75px, auto 70px, auto 25px, auto 72px;
 }
 
@@ -1477,7 +1477,7 @@ body .site-footer span { font-weight: 700; }
     url("assets/ichijojifes/decorations/bush-light-with-flowers.png"),
     url("assets/ichijojifes/food/beer-mug.png"),
     url("assets/ichijojifes/decorations/tree-round-bright.png");
-  background-position: 3% bottom, 31% bottom, 69% bottom, 96% bottom;
+  background-position: 5% bottom, 31% bottom, 69% bottom, 92% bottom;
   background-size: auto 68px, auto 27px, auto 62px, auto 76px;
 }
 
@@ -1487,7 +1487,7 @@ body .site-footer span { font-weight: 700; }
     url("assets/ichijojifes/decorations/tree-round-full.png"),
     url("assets/ichijojifes/decorations/bush-light-wide.png"),
     url("assets/ichijojifes/decorations/tree-conifer.png");
-  background-position: 3% bottom, 29% bottom, 67% bottom, 96% bottom;
+  background-position: 5% bottom, 29% bottom, 67% bottom, 92% bottom;
   background-size: auto 76px, auto 72px, auto 28px, auto 72px;
 }
 
@@ -1521,7 +1521,7 @@ body .site-footer span { font-weight: 700; }
 
 @media (max-width: 700px) {
   .guide::after {
-    background-position: -8px bottom, 20% bottom, 54% bottom, 82% bottom, calc(100% + 8px) bottom;
+    background-position: 34px bottom, 22% bottom, 52% bottom, 76% bottom, calc(100% - 42px) bottom;
     background-size: auto 72px, auto 60px, auto 24px, auto 66px, auto 72px;
   }
 
@@ -1530,4 +1530,181 @@ body .site-footer span { font-weight: 700; }
 
 @media (max-width: 560px) {
   .volunteer-cta { width: 100%; }
+}
+
+/* Fixed navigation and safe anchor positions. */
+html { scroll-padding-top: 92px; }
+section[id], #volunteer { scroll-margin-top: 92px; }
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 80;
+  min-height: 74px;
+  background: rgba(255, 253, 247, .92);
+  border-bottom: 1px solid rgba(218, 202, 169, .5);
+  box-shadow: 0 5px 20px rgba(62, 48, 24, .06);
+  backdrop-filter: blur(14px);
+  transition: background .2s ease, box-shadow .2s ease;
+}
+.site-header.is-scrolled,
+.site-header.is-menu-open {
+  background: rgba(255, 253, 247, .98);
+  box-shadow: 0 7px 24px rgba(40, 34, 20, .12);
+}
+.content-section__bar { top: 74px; z-index: 18; }
+
+/* FOOD: catches are the primary message; shop names are supporting information. */
+.vendor-card {
+  grid-template-columns: 154px minmax(0, 1fr);
+  align-items: stretch;
+  min-height: 206px;
+  overflow: hidden;
+}
+.vendor-card > img {
+  width: 100%;
+  height: 100%;
+  min-height: 204px;
+  object-fit: contain;
+  object-position: center;
+  padding: 14px;
+  background: #fffaf2;
+}
+.vendor-card__content {
+  min-width: 0;
+  padding: 18px 18px 16px 0;
+}
+.vendor-card__heading { align-items: flex-start; gap: 12px; }
+.vendor-card__heading > div { min-width: 0; }
+.vendor-card__heading span {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  font-size: 1rem;
+}
+.vendor-card .vendor-card__shop {
+  margin: 0 0 6px;
+  padding: 0;
+  color: #66736b;
+  font-size: .69rem;
+  font-weight: 800;
+  line-height: 1.45;
+  border: 0;
+}
+.vendor-card__heading h4 {
+  margin: 0;
+  color: var(--green);
+  font-size: clamp(.98rem, 1.15vw, 1.12rem);
+  font-weight: 900;
+  line-height: 1.55;
+  letter-spacing: .025em;
+}
+.vendor-card .vendor-card__description {
+  margin: 11px 0 0 56px;
+  padding-top: 10px;
+  color: #272b28;
+  font-size: .77rem;
+  font-weight: 800;
+  line-height: 1.8;
+  border-top: 1px dotted #d5b984;
+}
+
+/* Reserve a real footer area for section decorations, so trees never sit behind content. */
+#dance .content-section__body,
+#timetable .content-section__body,
+#access .content-section__body,
+#information .content-section__body,
+#supporters .content-section__body {
+  padding-bottom: 126px;
+}
+.content-section__body::after {
+  bottom: 12px;
+  z-index: 0;
+  pointer-events: none;
+}
+.content-section__body > * { position: relative; z-index: 1; }
+.notice-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+/* Natural-size landscape pieces instead of stretched strips. */
+.experience-overview__landscape {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  height: 118px;
+  padding: 8px 16px 12px;
+  overflow: visible;
+}
+.experience-overview__landscape img {
+  width: auto;
+  height: auto;
+  max-width: 23%;
+  max-height: 94px;
+  object-fit: contain;
+  object-position: center bottom;
+}
+.experience-booth-card__media img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 102px;
+  display: block;
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .site-header { padding-inline: 24px; }
+  .wordmark { width: 152px; }
+  .site-nav { gap: .72rem; font-size: .7rem; }
+}
+
+@media (max-width: 900px) {
+  html { scroll-padding-top: 80px; }
+  section[id], #volunteer { scroll-margin-top: 80px; }
+  .site-header { min-height: 64px; }
+  .content-section__bar { top: 64px; }
+  .site-nav { background: rgba(255, 253, 247, .99); }
+  #dance .content-section__body,
+  #timetable .content-section__body,
+  #access .content-section__body,
+  #information .content-section__body,
+  #supporters .content-section__body { padding-bottom: 104px; }
+}
+
+@media (max-width: 700px) {
+  .experience-booth-card__media img { max-height: 72px; }
+  .vendor-card {
+    grid-template-columns: 96px minmax(0, 1fr);
+    min-height: 190px;
+  }
+  .vendor-card > img {
+    min-height: 188px;
+    padding: 9px;
+  }
+  .vendor-card__content { padding: 14px 12px 13px 0; }
+  .vendor-card__heading { gap: 8px; }
+  .vendor-card__heading span {
+    width: 37px;
+    height: 37px;
+    flex-basis: 37px;
+    font-size: .82rem;
+  }
+  .vendor-card .vendor-card__shop { margin-bottom: 4px; font-size: .61rem; }
+  .vendor-card__heading h4 { font-size: .84rem; line-height: 1.55; }
+  .vendor-card .vendor-card__description {
+    margin: 9px 0 0 45px;
+    padding-top: 8px;
+    font-size: .68rem;
+    line-height: 1.72;
+  }
+  .notice-grid { grid-template-columns: 1fr; }
+  .experience-overview__landscape {
+    height: 96px;
+    gap: 8px;
+    padding: 8px 5px 10px;
+  }
+  .experience-overview__landscape img { max-width: 24%; max-height: 68px; }
+  .content-section__body::after { bottom: 10px; }
 }
