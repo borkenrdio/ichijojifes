@@ -714,7 +714,7 @@ html { scroll-padding-top: 16px; }
 }
 
 .event-facts__date {
-  font-size: 4.2rem;
+  font-size: 4.8rem;
   font-weight: 600;
 }
 
@@ -728,7 +728,7 @@ html { scroll-padding-top: 16px; }
 .event-facts__time {
   margin-top: 1rem;
   padding: 0 .4rem;
-  font-size: 1.7rem;
+  font-size: 1.95rem;
   line-height: 1.35;
 }
 
@@ -752,8 +752,8 @@ html { scroll-padding-top: 16px; }
   .hero__lead { margin-bottom: 1.8rem; }
   .event-facts { margin-top: 20px; }
   .event-facts__year { font-size: .92rem; }
-  .event-facts__date { font-size: 3.35rem; }
-  .event-facts__time { font-size: 1.45rem; }
+  .event-facts__date { font-size: 3.9rem; }
+  .event-facts__time { font-size: 1.65rem; }
   .event-facts__place { font-size: 1.25rem; }
   .content-section__bar { top: 0; }
 }
@@ -763,8 +763,8 @@ html { scroll-padding-top: 16px; }
   .hero__content { padding-top: 84px; }
   .hero__lead { margin-bottom: 1.9rem; }
   .event-facts { margin-top: 18px; }
-  .event-facts__date { font-size: 3.35rem; }
-  .event-facts__time { font-size: 1.45rem; }
+  .event-facts__date { font-size: 3.85rem; }
+  .event-facts__time { font-size: 1.65rem; }
   .event-facts__place { font-size: 1.25rem; }
   .hero-scene__art { height: 600px; }
 }
