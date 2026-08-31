@@ -1577,6 +1577,34 @@ section[id], #volunteer { scroll-margin-top: 92px; }
   min-width: 0;
   padding: 18px 18px 16px 0;
 }
+.vendor-card__placeholder {
+  display: grid;
+  place-content: center;
+  gap: 5px;
+  min-height: 204px;
+  padding: 14px;
+  color: var(--green);
+  text-align: center;
+  background:
+    radial-gradient(circle at 20% 22%, rgba(246,195,63,.26) 0 4px, transparent 5px),
+    radial-gradient(circle at 82% 72%, rgba(88,173,40,.2) 0 5px, transparent 6px),
+    #fffdf8;
+  border-right: 1px dashed #dec99e;
+}
+.vendor-card__placeholder span {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0;
+  color: var(--green);
+  font-size: .78rem;
+  font-weight: 900;
+  line-height: 1.35;
+  letter-spacing: .12em;
+  background: transparent;
+  border-radius: 0;
+}
+.vendor-card__placeholder small { font-size: .64rem; font-weight: 800; line-height: 1.5; }
 .vendor-card__content > h4 {
   display: block;
   margin: 0;
@@ -1728,6 +1756,9 @@ section[id], #volunteer { scroll-margin-top: 92px; }
     min-height: 188px;
     padding: 9px;
   }
+  .vendor-card__placeholder { min-height: 188px; padding: 8px; }
+  .vendor-card__placeholder span { font-size: .66rem; letter-spacing: .06em; }
+  .vendor-card__placeholder small { font-size: .56rem; }
   .vendor-card__content { padding: 14px 12px 13px 0; }
   .vendor-card__content > h4 { font-size: .84rem; line-height: 1.55; }
   .content-section--food .vendor-card .vendor-card__shop { margin-top: 7px; padding-bottom: 7px; font-size: .65rem; }
