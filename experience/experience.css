@@ -65,6 +65,21 @@ a { color: inherit; }
 .activity-card__copy h2 { margin: 0 0 .4rem; color: var(--green); font-size: 1.2rem; font-weight: 900; letter-spacing: .06em; }
 .activity-card__copy p { margin: 0; font-size: .82rem; font-weight: 700; line-height: 1.75; }
 .activity-card__motif { width: 86px; height: 86px; margin: auto; object-fit: contain; }
+.activity-card--media-pending { grid-template-columns: 48px 220px minmax(0, 1fr); }
+.activity-card__photo--pending {
+  display: grid;
+  place-content: center;
+  gap: 4px;
+  color: var(--green);
+  text-align: center;
+  background:
+    radial-gradient(circle at 18% 25%, rgba(246,195,63,.28) 0 4px, transparent 5px),
+    radial-gradient(circle at 84% 72%, rgba(88,173,40,.2) 0 5px, transparent 6px),
+    #fffdf8;
+  border: 1px dashed #dec99e;
+}
+.activity-card__photo--pending b { font-size: .78rem; line-height: 1.35; letter-spacing: .12em; }
+.activity-card__photo--pending small { color: #65776c; font-size: .65rem; font-weight: 800; line-height: 1.4; }
 .activity-card__photo--sake,
 .activity-card__motif--sake {
   display: grid;

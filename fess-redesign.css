@@ -1249,6 +1249,19 @@ body .site-footer span { font-weight: 700; }
   font-size: 3.2rem;
   font-weight: 900;
 }
+.experience-booth-card__media--pending {
+  align-content: center;
+  gap: 3px;
+  color: var(--green);
+  text-align: center;
+  background:
+    radial-gradient(circle at 18% 25%, rgba(246,195,63,.28) 0 4px, transparent 5px),
+    radial-gradient(circle at 84% 72%, rgba(88,173,40,.2) 0 5px, transparent 6px),
+    #fffdf8;
+  border: 1px dashed #dec99e;
+}
+.experience-booth-card__media--pending b { font-size: .72rem; line-height: 1.35; letter-spacing: .1em; }
+.experience-booth-card__media--pending small { color: #65776c; font-size: .59rem; font-weight: 800; line-height: 1.4; }
 
 .supporter-special-grid {
   display: grid;
@@ -1295,6 +1308,8 @@ body .site-footer span { font-weight: 700; }
   .experience-booth-card { grid-template-columns: 34px 108px minmax(0, 1fr) 28px; }
   .experience-booth-card__media { height: 88px; padding: 7px; }
   .experience-booth-card__media--icon { font-size: 2.35rem; }
+  .experience-booth-card__media--pending b { font-size: .59rem; letter-spacing: .04em; }
+  .experience-booth-card__media--pending small { font-size: .5rem; }
   .supporter-special-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .supporter-special-grid article { grid-template-rows: 92px auto; min-height: 132px; padding: 12px 8px 9px; }
   .supporter-special-grid img { height: 86px; }
