@@ -109,6 +109,94 @@ a { color: inherit; }
 .info-panel--pending { display: block; max-width: 760px; text-align: center; }
 .info-panel--pending p { margin: .4rem 0 0; font-weight: 700; }
 
+/* Kyoto Seika University: long-form program details. */
+.program-index {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 1030px;
+  margin: 0 auto 22px;
+}
+.program-index a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 62px;
+  padding: 10px 12px;
+  color: var(--green);
+  font-size: .76rem;
+  font-weight: 900;
+  line-height: 1.5;
+  text-decoration: none;
+  background: #f8fff5;
+  border: 1px solid #a9c9a7;
+  border-radius: 10px;
+}
+.program-index a:hover,
+.program-index a:focus-visible { color: white; background: var(--green); outline: none; }
+.program-index span {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  color: white;
+  font-size: .68rem;
+  background: var(--green);
+  border-radius: 50%;
+}
+.program-index a:hover span,
+.program-index a:focus-visible span { color: var(--green); background: white; }
+.seika-program-list { display: grid; gap: 22px; max-width: 1030px; margin: 0 auto 32px; }
+.seika-program {
+  scroll-margin-top: 20px;
+  padding: 28px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(69,45,14,.06);
+}
+.seika-program__header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.seika-program__header > span {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  color: white;
+  font-size: .9rem;
+  font-weight: 900;
+  background: var(--green);
+  border-radius: 50%;
+}
+.seika-program__header p { margin: 0 0 .15rem; color: #6a8c5f; font-size: .72rem; font-weight: 900; letter-spacing: .12em; }
+.seika-program__header h2 { margin: 0; color: var(--green); font-size: 1.55rem; font-weight: 900; line-height: 1.4; letter-spacing: .06em; }
+.seika-program__lead { margin: 0 0 22px; padding: 15px 18px; color: var(--green); font-size: .93rem; font-weight: 900; background: #f3faec; border-left: 5px solid var(--green-light); border-radius: 0 9px 9px 0; }
+.seika-program__section { margin-top: 22px; }
+.seika-program__section h3,
+.program-flow h3 { margin: 0 0 10px; color: var(--green); font-size: 1.08rem; font-weight: 900; }
+.seika-program__section h3::before,
+.program-flow h3::before { content: "●"; margin-right: .45rem; color: var(--green-light); font-size: .68em; }
+.seika-program__section p { margin: .7rem 0 0; font-size: .84rem; font-weight: 700; line-height: 1.9; }
+.program-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin: 24px 0 0; overflow: hidden; background: #c8dbc5; border: 1px solid #c8dbc5; border-radius: 11px; }
+.program-facts > div { display: grid; grid-template-columns: 105px minmax(0, 1fr); background: #fffefa; }
+.program-facts__wide { grid-column: 1 / -1; }
+.program-facts dt,
+.program-facts dd { margin: 0; padding: 12px 13px; font-size: .78rem; line-height: 1.75; }
+.program-facts dt { color: var(--green); font-weight: 900; background: #f3faec; }
+.program-facts dd { font-weight: 700; }
+.program-facts dd strong { color: var(--green); font-weight: 900; }
+.program-facts dd small { font-size: .7rem; font-weight: 700; }
+.program-flow { margin-top: 22px; padding: 18px 20px; background: #fffaf0; border: 1px solid #edd9ae; border-radius: 11px; }
+.program-flow ol,
+.program-flow ul { margin: 0; padding-left: 1.5rem; }
+.program-flow li { margin: .35rem 0; font-size: .8rem; font-weight: 700; line-height: 1.75; }
+.program-flow p { margin: .8rem 0 0; font-size: .78rem; font-weight: 700; }
+.program-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-top: 20px; padding: 14px 16px; font-size: .74rem; font-style: normal; background: #f6f6f2; border-radius: 9px; }
+.program-contact strong { width: 100%; color: var(--green); font-size: .82rem; }
+.program-contact span { font-weight: 900; }
+.program-contact a { color: var(--green); font-weight: 800; overflow-wrap: anywhere; }
+
 .detail-landscape { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; height: 145px; padding: 10px 18px 14px; margin: 18px -46px 0; overflow: visible; }
 .detail-landscape img { width: auto; height: auto; max-width: 23%; max-height: 108px; object-fit: contain; object-position: center bottom; }
 .activity-card__photo[src$="event-watagashi.png"] { object-fit: contain; object-position: center; padding: 10px; overflow: visible; }
@@ -146,6 +234,26 @@ a { color: inherit; }
   .info-panel dt, .info-panel dd, .info-panel li { font-size: .76rem; }
   .detail-landscape { height: 98px; gap: 7px; padding: 8px 5px 10px; margin: 14px -14px 0; }
   .detail-landscape img { max-width: 24%; max-height: 68px; }
+  .program-index { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .program-index a { min-height: 56px; padding: 8px; font-size: .67rem; }
+  .seika-program-list { gap: 16px; }
+  .seika-program { padding: 18px 14px; border-radius: 13px; }
+  .seika-program__header { gap: 10px; }
+  .seika-program__header > span { width: 40px; height: 40px; flex-basis: 40px; font-size: .76rem; }
+  .seika-program__header p { font-size: .62rem; }
+  .seika-program__header h2 { font-size: 1.2rem; }
+  .seika-program__lead { margin-bottom: 18px; padding: 12px 13px; font-size: .82rem; }
+  .seika-program__section h3,
+  .program-flow h3 { font-size: .98rem; }
+  .seika-program__section p { font-size: .8rem; line-height: 1.85; }
+  .program-facts { grid-template-columns: 1fr; }
+  .program-facts__wide { grid-column: auto; }
+  .program-facts > div { grid-template-columns: 88px minmax(0, 1fr); }
+  .program-facts dt,
+  .program-facts dd { padding: 10px; font-size: .72rem; }
+  .program-flow { padding: 14px; }
+  .program-flow li { font-size: .74rem; }
+  .program-contact { align-items: flex-start; flex-direction: column; font-size: .69rem; }
 }
 
 @media (max-width: 460px) {
@@ -155,6 +263,7 @@ a { color: inherit; }
   .activity-card { grid-template-columns: 30px 92px minmax(0,1fr); gap: 8px; }
   .activity-card__photo { height: 94px; }
   .activity-card__photo--sound { padding: 22px 30px; }
+  .program-index { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
